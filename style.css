@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+ #playground{
+    background-color: green;
+    width:400px;
+    height: 400px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    font-size: 30px;
+ }
+#score-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px ;border-radius: 6px;
+    box-shadow: 3px 3px 3px rgb(2, 53, 2);
+}
+ #retry{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 25px;
+    color: white;
+    box-shadow: 3px 3px 3px rgb(1, 44, 1);
+ }
+ #target{
+    width: 50px;
+    height: 50px;
+    position:absolute;
+    border-radius: 50%;
+    border: 3px solid white;
+    background: url(./img/target.png);
+    background-size: cover;
+    background-position: center ;
+    animation: growAnimation 1s linear infinite;
+ }
+
+ @keyframes growAnimation {
+    from {
+      width: 20px;
+      height: 20px;
+    }
+    to {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  /* CSS dosyanızın içinde */
+@keyframes resetAnimation {
+    to {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  #targetHiddenBorder{
+    animation: disappear 4s linear ;
+ }
+ 
+ @keyframes disappear {
+    from {
+        width: 40px;
+        height: 40px;
+      }
+      to {
+        width: 20px;
+        height: 20px;
+      }
+ }
+  
+
+
