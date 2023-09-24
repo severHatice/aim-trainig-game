@@ -5,9 +5,11 @@
 }
 
  #playground{
-    background-color: green;
-    width:400px;
-    height: 400px;
+    background-image: url(./img/target-bg.png);
+    background-position: center;
+    background-size: cover;
+    width:800px;
+    height: 800px;
     position:relative;
     display: flex;
     flex-direction: column;
@@ -33,7 +35,7 @@
     color: white;
     box-shadow: 3px 3px 3px rgb(1, 44, 1);
  }
- #target{
+ .target{
     width: 50px;
     height: 50px;
     position:absolute;
@@ -63,8 +65,8 @@
     }
   }
 
-  #targetHiddenBorder{
-    animation: disappear 4s linear ;
+  .targetHiddenBorder{
+    animation: disappear 2s linear infinite;
  }
  
  @keyframes disappear {
@@ -78,5 +80,18 @@
       }
  }
   
+#time{
+  background-color: rgba(0, 100, 0, 0.398);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 9px darkgreen;
+  
+}
 
-
+#target {
+  transition: opacity 0.3s;
+}
+.targetHidden {
+  opacity: 0;
+  visibility: hidden;
+}
